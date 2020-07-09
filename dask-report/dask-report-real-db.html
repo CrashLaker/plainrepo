@@ -1,22 +1,27 @@
+
+
+
+
 <!DOCTYPE html>
-<!-- saved from url=(0048)http://10.11.192.180:8891/files/dask-report.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  
+  <head>
     
-      
+      <meta charset="utf-8">
       <title>Dask Performance Report</title>
       
-<link rel="shortcut icon" href="https://docs.dask.org/en/latest/_static/images/favicon.ico">
+<link rel="shortcut icon" href="https://docs.dask.org/en/latest/_static/images/favicon.ico" />
 
       
         
           
-        <link rel="stylesheet" href="./dask-report-real-db_files/bokeh-1.2.0.min.css" type="text/css">
-        <link rel="stylesheet" href="./dask-report-real-db_files/bokeh-widgets-1.2.0.min.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.css" type="text/css" />
         
         
           
-        <script type="text/javascript" src="./dask-report-real-db_files/bokeh-1.2.0.min.js.download"></script>
-        <script type="text/javascript" src="./dask-report-real-db_files/bokeh-widgets-1.2.0.min.js.download"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.js"></script>
         <script type="text/javascript">
             Bokeh.set_log_level("info");
         </script>
@@ -34,49 +39,7 @@
           
           
             
-              <div class="bk-root" id="17fb46df-36f0-453a-9e24-9b28587ddf11" data-root-id="1227"><div class="bk" style="position: relative; display: block; left: 0px; top: 0px; width: 1717px; height: 870px; margin: 0px;"><div class="bk" style="position: absolute; left: 5px; top: 36px; width: 521px; height: 829px; display: block;"><div class="bk bk-clearfix" style="display: inline-block;">
-        <h1> Dask Performance Report </h1>
-
-        <i> Select different tabs on the top for additional information </i>
-
-        <h2> Duration: 93.09 s </h2>
-        <h2> Tasks Information </h2>
-        <ul>
-         <li> number of tasks: 422 </li>
-         
-<li> compute time: 591.29 s </li>
-<li> deserialize time: 11.18 s </li>
-<li> disk-write time: 202.40 ms </li>
-        </ul>
-
-        <h2> Scheduler Information </h2>
-        <ul>
-          <li> Address: inproc://172.17.0.9/318/1 </li>
-          <li> Workers: 1 </li>
-          <li> Threads: 8 </li>
-          <li> Memory: 16.66 GB </li>
-        </ul>
-
-        <h2> Calling Code </h2>
-        <pre>    def _run(self):
-        try:
-            self._context.run(self._callback, *self._args)
-        except Exception as exc:
-            cb = format_helpers._format_callback_source(
-                self._callback, self._args)
-            msg = f'Exception in callback {cb}'
-            context = {
-                'message': msg,
-                'exception': exc,
-                'handle': self,
-            }
-            if self._source_traceback:
-                context['source_traceback'] = self._source_traceback
-            self._loop.call_exception_handler(context)
-        self = None  # Needed to break cycles when an exception occurs.
-
-        </pre>
-        </div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><div class="bk bk-shading" style="display: none;"></div></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="bk" style="position: absolute; overflow: hidden; left: 1430px; top: 0px; width: 205px; height: 30px;"><div class="bk bk-toolbar bk-toolbar-above"><a class="bk bk-logo bk-logo-small" href="https://bokeh.pydata.org/" target="_blank"></a><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-xpan bk-active" title="Pan (x-axis)"></div><div class="bk bk-toolbar-button bk-tool-icon-box-zoom" title="Box Zoom"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-wheel-zoom" title="Wheel Zoom (x-axis)"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-tap-select bk-active" title="Tap"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-reset" title="Reset"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-hover bk-active" title="Hover"></div></div></div></div></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><div class="bk bk-shading" style="display: none;"></div></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="bk" style="position: absolute; overflow: hidden; left: 1635px; top: 30px; width: 30px; height: 785px;"><div class="bk bk-toolbar bk-toolbar-right"><a class="bk bk-logo bk-logo-small" href="https://bokeh.pydata.org/" target="_blank"></a><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-box-zoom bk-active" title="Box Zoom"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-wheel-zoom" title="Wheel Zoom (x-axis)"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-tap-select bk-active" title="Tap"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-reset" title="Reset"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-hover bk-active" title="Hover"></div></div></div></div></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><div class="bk bk-shading" style="display: none;"></div></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="bk" style="position: absolute; overflow: hidden; left: 1635px; top: 30px; width: 30px; height: 785px;"><div class="bk bk-toolbar bk-toolbar-right"><a class="bk bk-logo bk-logo-small" href="https://bokeh.pydata.org/" target="_blank"></a><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-box-zoom bk-active" title="Box Zoom"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-wheel-zoom" title="Wheel Zoom (x-axis)"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-tap-select bk-active" title="Tap"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-reset" title="Reset"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-hover bk-active" title="Hover"></div></div></div></div></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"><div class="bk bk-shading" style="display: none;"></div></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div class="bk" style="position: absolute; overflow: hidden; left: 1635px; top: 30px; width: 30px; height: 785px;"><div class="bk bk-toolbar bk-toolbar-right"><a class="bk bk-logo bk-logo-small" href="https://bokeh.pydata.org/" target="_blank"></a><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-box-zoom bk-active" title="Box Zoom"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-wheel-zoom" title="Wheel Zoom (x-axis)"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-tap-select bk-active" title="Tap"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-reset" title="Reset"></div></div><div class="bk bk-button-bar"><div class="bk bk-toolbar-button bk-tool-icon-hover bk-active" title="Hover"></div></div></div></div></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></div></div><div class="bk" style="position: absolute; display: block; left: 0px; top: 31px; width: 1717px; height: 839px; visibility: hidden;"><div class="bk" style="width: 1717px; height: 839px;"><canvas class="bk bk-canvas" width="1717" height="839" style="position: absolute; top: 0px; left: 0px; width: 1717px; height: 839px;"></canvas><div class="bk bk-canvas-overlays" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></div><div class="bk bk-canvas-events" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; touch-action: auto; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></div></div><div class="bk bk-tabs-header bk-above" style="position: absolute; left: 0px; top: 0px; width: 1717px; height: 31px;"><div class="bk bk-btn-group" style="display: none;"><div class="bk bk-btn bk-btn-default" disabled=""><div class="bk bk-caret bk-left"></div></div><div class="bk bk-btn bk-btn-default"><div class="bk bk-caret bk-right"></div></div></div><div class="bk bk-headers-wrapper"><div class="bk bk-headers"><div class="bk bk-tab bk-active">Summary</div><div class="bk bk-tab">Task Stream</div><div class="bk bk-tab">Worker Profile (compute)</div><div class="bk bk-tab">Worker Profile (administrative)</div><div class="bk bk-tab">Scheduler Profile (administrative)</div><div class="bk bk-tab">Bandwidth (Workers)</div><div class="bk bk-tab">Bandwidth (Types)</div></div></div></div></div></div>
+              <div class="bk-root" id="17fb46df-36f0-453a-9e24-9b28587ddf11" data-root-id="1227"></div>
             
           
         
@@ -121,6 +84,6 @@
           })();
         </script>
     
+  </body>
   
-  
-</body></html>
+</html>
