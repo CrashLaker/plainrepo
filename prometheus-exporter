@@ -1,0 +1,4 @@
+queue{name="A"} 33
+queue{name="B"} 60
+queue{name="C"} 74
+num_workers 19
